@@ -58,7 +58,7 @@ ffmpeg -i silent.mp4 -i teardown-out/my-score.wav -map 0:v -map 1:a -c:v copy -c
 
 A film frame is the average of N sub-frames. Each sub-frame moves the time inside the shutter (true motion blur), the camera on the lens disc with the focus plane held (true depth of field, through transparent layers too), and a sub-pixel offset (anti-aliasing). Dithered ray marching converges with it. Post runs once on the averaged HDR image: bloom, anamorphic streak, light shafts toward a point, ACES, grade, grain, vignette. `samples: 1` is the same pipeline for live pages.
 
-Numbers from a laptop with an integrated Radeon 780M, at 1920x1080: 32 samples per frame took 2.3 seconds a frame including the encode: 27 minutes for 30 seconds of film at 24 fps. A draft at 960x480 and 4 samples took 41 seconds for the whole film, so use drafts freely. The live page ran 62 to 89 fps at 1600x900. Check `gpu:` in capture's output; a software renderer means the GPU flags did not take.
+Numbers from a laptop with an integrated Radeon 780M, at 1920x1080: 32 samples per frame took 2.3 seconds a frame including the encode: 27 minutes for 30 seconds of film at 24 fps. A draft at 960x480 and 4 samples took 41 seconds for the whole film, so use drafts freely. The live page ran 37 to 51 fps across its whole scroll at 1600x900, and higher in spot readings with nothing else running. Check `gpu:` in capture's output; a software renderer means the GPU flags did not take.
 
 ## Rules that decided whether it worked
 

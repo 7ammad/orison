@@ -29,7 +29,7 @@ After every pass, put the frame beside the image, list what differs, and fix it.
 
 ## Numbers
 
-On a laptop with an integrated Radeon 780M: 27 minutes to render 30 seconds at 1920x1080 with 32 renders per frame, 41 seconds for a 960x480 draft with 4 renders per frame, and 62 to 89 fps on the live page at 1600x900.
+On a laptop with an integrated Radeon 780M: 27 minutes to render 30 seconds at 1920x1080 with 32 renders per frame, 41 seconds for a 960x480 draft with 4 renders per frame, and 37 to 51 fps across the live page's whole scroll at 1600x900.
 
 ## Credits
 

@@ -1,0 +1,44 @@
+/* One world, always night: a single dark look, set explicitly. Gold light on indigo, taken from the painting. */
+:root{--night:#05040c;--ink:#ffecd6;--ink-soft:rgba(255,236,214,.72);--ink-faint:rgba(255,236,214,.2);--glow:#ffd9a0;--glow-halo:rgba(255,190,110,.65);color-scheme:dark}
+html,body{height:auto!important;overflow-x:hidden!important;overflow-y:auto!important;background:var(--night);color:var(--ink);scrollbar-width:none}
+html::-webkit-scrollbar,body::-webkit-scrollbar{display:none}
+#track{height:1100vh}
+
+/* the painting, until the real thing can take over */
+.poster{position:fixed;inset:0;background:var(--night) center/cover no-repeat;transition:opacity 2.2s ease}
+.poster.off{opacity:0}
+canvas#gl{position:fixed;inset:0;width:100vw;height:100vh;height:100dvh;display:block;touch-action:pan-y;opacity:0;transition:opacity 2.2s ease}
+canvas#gl.on{opacity:1}
+@media (hover:hover) and (pointer:fine){canvas#gl,body{cursor:none}}
+
+/* while the shaders compile: one small pulse */
+.wake{position:fixed;left:50%;bottom:calc(26px + env(safe-area-inset-bottom,0px));pointer-events:none;transition:opacity .8s ease}
+.wake i{display:block;width:8px;height:8px;margin-left:-4px;border-radius:50%;background:var(--glow);box-shadow:0 0 18px 5px var(--glow-halo);animation:wake 1.6s ease-in-out infinite}
+.wake.off{opacity:0}
+@keyframes wake{0%,100%{transform:scale(.7);opacity:.45}45%{transform:scale(1.25);opacity:1}}
+
+/* where you are on the journey: a thin line, no labels */
+.rail{position:fixed;right:calc(18px + env(safe-area-inset-right,0px));top:50%;width:1px;height:132px;transform:translateY(-50%);background:var(--ink-faint);pointer-events:none;opacity:0;transition:opacity 1.2s ease}
+.rail.on{opacity:1}
+.rail i{position:absolute;left:-2px;top:0;width:5px;height:5px;border-radius:50%;background:var(--glow);box-shadow:0 0 10px 2px var(--glow-halo)}
+
+/* scroll: there is more below */
+.hint{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);color:var(--ink-soft);pointer-events:none;opacity:0;transition:opacity .8s ease;animation:drop 2.4s ease-in-out infinite}
+.hint.on{opacity:1}
+@keyframes drop{0%,100%{margin-bottom:0}50%{margin-bottom:-7px}}
+
+.sound{position:fixed;right:calc(6px + env(safe-area-inset-right,0px));bottom:calc(6px + env(safe-area-inset-bottom,0px));width:44px;height:44px;display:grid;place-items:center;padding:0;border:0;border-radius:50%;background:transparent;color:var(--ink-soft);cursor:pointer;opacity:0;transition:opacity .8s ease,color .2s ease}
+.sound.on{opacity:1}
+.sound:hover{color:var(--ink)}
+.sound:focus-visible{outline:1.5px solid var(--glow);outline-offset:-4px}
+.sound .mute{display:none}
+.sound[aria-pressed="true"] .waves{display:none}
+.sound[aria-pressed="true"] .mute{display:inline}
+
+/* the touch: a soft ring in place of the cursor */
+.touch{position:fixed;left:0;top:0;width:26px;height:26px;margin:-13px 0 0 -13px;border-radius:50%;border:1px solid var(--glow);box-shadow:0 0 14px var(--glow-halo);pointer-events:none;opacity:0;transition:opacity .3s ease,width .25s ease,height .25s ease,margin .25s ease;will-change:transform}
+.touch.on{opacity:.8}
+.touch.hit{width:58px;height:58px;margin:-29px 0 0 -29px}
+@media (hover:none){.touch{display:none}}
+
+@media (prefers-reduced-motion:reduce){.wake i,.hint{animation:none}}

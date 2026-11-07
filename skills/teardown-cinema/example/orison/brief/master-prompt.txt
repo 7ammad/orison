@@ -1,0 +1,20 @@
+Use the built-in image generation tool to create one image at the largest wide landscape size available (at least 3:2, ideally 21:9 or 16:9). Use the highest quality image model available. Generate exactly this image, no text anywhere in it. Save or copy the final image as master.png in the current folder. Then state the model and pixel size that were used, and the exact path of the generated original.
+
+PROMPT:
+A single frame from a big-budget science fiction film, shot on a large-format anamorphic lens: a colossal living creature the size of a mountain range floats in the upper atmosphere of an alien gas giant at dusk.
+
+THE CREATURE: its body is one immense bell-shaped dome, like a cathedral built by a jellyfish. The dome is translucent, made of hundreds of long curved ribs of pearl and nacre that sweep from the crown down to a scalloped rim, with an iridescent lace membrane stretched between the ribs in veined cellular patterns, glowing teal and rose where light passes through it. Rows of small pulsing light organs run along every rib.
+
+THE HEART: visible through the membrane, in the hollow centre of the bell, hangs a huge glowing living orrery, a nested set of concentric golden rings and gimbals turning at different angles around a small white-gold sun, with small glowing spheres riding on the rings. It looks both mechanical and grown, like a clock made of bone and gold. Light from it spills outward through the ribs in long god rays.
+
+THE TRAILING BODY: below the rim, thousands of hair-fine luminous filaments and about twelve long frilled ribbon arms, ruffled like silk and carrying beads of light, trail hundreds of metres down and drift into a sea of violet and amber clouds far below.
+
+SCALE: tiny barnacle-like towers with minute warm lit windows cling to the upper ribs, and flocks of tiny glowing winged creatures circle the rim, so the viewer understands the creature is many kilometres across.
+
+THE WORLD: behind it an enormous ringed planet fills the upper left of the sky, banded in amber, cream and teal, its rings cutting a sharp bright arc across the whole frame. Two small moons. A thick field of stars and faint green-violet aurora curtains. A low distant sun on the right gives a thin hot rim light along the crown of the bell.
+
+COMPOSITION: the creature centred slightly right, filling about 60 percent of the frame height, seen from slightly below and from a distance through thin haze, with layered clouds in the foreground at the bottom of the frame for depth.
+
+PALETTE: deep indigo and violet shadows, warm gold heart, teal bioluminescence, pearl highlights, one thin line of hot orange sunlight.
+
+STYLE: photoreal, physically plausible light, immense atmospheric perspective, extremely intricate detail at every scale, matte painting quality. No text, no logos, no letters, no watermark, no people, no spaceships, no borders.
